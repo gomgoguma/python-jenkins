@@ -26,6 +26,7 @@ services:
       - TZ=Asia/Seoul
       - KAFKA_HOST=${KAFKA_HOST}
       - KAFKA_PORT=${KAFKA_PORT}
+      - EUREKA_SERVER=${EUREKA_SERVER}
       - DB_URL=${DB_URL}
       - PROFILE=${PROFILE}
       - HOST=${HOST}
