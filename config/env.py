@@ -8,6 +8,7 @@ HOST = None
 PORT = None
 EUREKA_SERVER = None
 EUREKA_APP_NAME = None
+RELOAD = None
 
 if PROFILE == 'local':
     DB_SCHEMA = 'dev'
@@ -15,6 +16,7 @@ if PROFILE == 'local':
     PORT = os.environ.get("PORT")
     EUREKA_SERVER = 'http://localhost:8761'
     EUREKA_APP_NAME = 'notify-service-dev'
+    RELOAD = True
 
 elif PROFILE == 'dev':
     DB_SCHEMA = 'dev'
@@ -22,6 +24,7 @@ elif PROFILE == 'dev':
     PORT = os.environ.get("PORT")
     EUREKA_SERVER = os.environ.get("EUREKA_SERVER")
     EUREKA_APP_NAME = 'notify-service-dev'
+    RELOAD = False
 
 elif PROFILE == 'pd':
     DB_SCHEMA = 'public'
@@ -29,5 +32,6 @@ elif PROFILE == 'pd':
     PORT = os.environ.get("PORT")
     EUREKA_SERVER = os.environ.get("EUREKA_SERVER")
     EUREKA_APP_NAME = 'notify-service'
+    RELOAD = False
 
 

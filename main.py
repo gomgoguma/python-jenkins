@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI, APIRouter
 import py_eureka_client.eureka_client as eureka_client
-from config.env import HOST, PORT, EUREKA_SERVER, EUREKA_APP_NAME
+from config.env import HOST, PORT, EUREKA_SERVER, EUREKA_APP_NAME, RELOAD
 
 from notify.router import notify_router
 
@@ -16,4 +16,4 @@ if __name__ == "__main__":
                        instance_host=HOST,
                        instance_port=int(PORT))
 
-    uvicorn.run("main:app", host=HOST, port=int(PORT), reload=True, )
+    uvicorn.run("main:app", host=HOST, port=int(PORT), reload=RELOAD, )
