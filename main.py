@@ -16,4 +16,4 @@ if __name__ == "__main__":
                        instance_host=HOST,
                        instance_port=int(PORT))
 
-    uvicorn.run("main:app", host=HOST, port=int(PORT), reload=RELOAD, )
+    uvicorn.run("main:app", host='0.0.0.0', port=int(PORT), reload=RELOAD, )
